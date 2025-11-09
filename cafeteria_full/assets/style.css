@@ -1,0 +1,47 @@
+/* Tema: Salmón */
+:root{
+  --salmon: #ff8c77;
+  --salmon-dark: #d86a53;
+  --bg: #fff7f5;
+  --muted: #6b6b6b;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:#222}
+.site-header{background:var(--salmon-dark);color:white;padding:16px 20px;display:flex;justify-content:space-between;align-items:center}
+.site-header a{color:rgba(255,255,255,0.95);text-decoration:none;margin-left:10px}
+.container{max-width:1100px;margin:28px auto;padding:0 18px}
+h1,h2{margin:0 0 12px}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px}
+.card{background:white;border-radius:10px;overflow:hidden;box-shadow:0 8px 20px rgba(0,0,0,0.06);text-decoration:none;color:inherit;display:flex;flex-direction:column}
+.card-link{color:inherit;text-decoration:none;display:block;height:100%}
+.card-image{height:160px;display:flex;align-items:center;justify-content:center;background:#fff0ef}
+.card-image img{width:100%;height:160px;object-fit:cover}
+.card-body{padding:12px;flex:1}
+.card-body h3{margin:0 0 6px}
+.brand{font-size:13px;color:var(--muted)}
+.price{font-weight:700;margin-top:8px;color:var(--salmon-dark)}
+.stock{font-size:13px;color:#333}
+.admin-table{width:100%;border-collapse:collapse;background:white;box-shadow:0 8px 24px rgba(0,0,0,.06)}
+.admin-table th, .admin-table td{padding:10px;border-bottom:1px solid #f0e6e6;text-align:left}
+.product-form label{display:block;margin-bottom:12px}
+.product-form input, .product-form textarea{width:100%;padding:10px;border:1px solid #eee;border-radius:6px}
+.login-form{max-width:420px;margin:80px auto;padding:18px;background:white;border-radius:8px;box-shadow:0 10px 30px rgba(0,0,0,.06)}
+button{background:var(--salmon);color:white;padding:10px 14px;border:none;border-radius:6px;cursor:pointer}
+a.btn-cancel{display:inline-block;margin-left:8px;padding:8px 12px;background:#f3d8d3;color:#6b6b6b;border-radius:6px;text-decoration:none}
+.detail-card{display:flex;gap:24px;background:white;padding:18px;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,0.05)}
+.detail-image img{max-width:420px}
+.no-image{padding:18px;color:var(--muted)}
+.error{color:#b00020}
+@media(max-width:800px){
+  .detail-card{flex-direction:column}
+  .card-image{height:200px}
+}
+
+/* Estilos para admin/payments.php */
+table.payments { width: 100%; border-collapse: collapse; margin: 20px 0; }
+table.payments th, table.payments td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+table.payments tr:nth-child(even){ background: #f9f9f9; }
+table.payments th { background: #333; color: #fff; }
+.state-pagado { background: #e6ffed; }
+.state-pendiente { background: #fffbe6; }
+.state-fallido { background: #ffe6e6; }
